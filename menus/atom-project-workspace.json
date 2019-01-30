@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle atom-project-workspace",
+        "command": "atom-project-workspace:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atom-project-workspace",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "atom-project-workspace:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
