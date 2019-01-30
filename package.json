@@ -2,11 +2,11 @@
   "name": "atom-project-workspace",
   "main": "./lib/atom-project-workspace",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Save and Reload the Project Workspace in Atom for easier context switching",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "atom-project-workspace:toggle"
+    "atom-workspace": "atom-project-workspace:saveState"
   },
   "repository": "https://github.com/atom/atom-project-workspace",
   "license": "MIT",

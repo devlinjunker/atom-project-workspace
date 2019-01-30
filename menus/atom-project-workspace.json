@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle atom-project-workspace",
-        "command": "atom-project-workspace:toggle"
+        "label": "Save Project State",
+        "command": "atom-project-workspace:saveState"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "atom-project-workspace",
+          "label": "Project Workspace",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "atom-project-workspace:toggle"
+              "label": "Save State",
+              "command": "atom-project-workspace:saveState"
             }
           ]
         }
