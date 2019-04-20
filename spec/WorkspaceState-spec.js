@@ -1,13 +1,12 @@
 'use babel'
-import { assert, expect, describe, it } from 'jasmine';
-import WorkspaceState from "lib/WorkspaceState.js";
+import WorkspaceState from "../lib/WorkspaceState.js";
 
 describe('WorkspaceState', () => {
   describe('<Instance>', () => {
     const state = { 'init': 'state' };
     const directories = ['./'];
     let workspace;
-    beforeAll(() => {
+    beforeEach(() => {
       workspace = new WorkspaceState({ state, directories });
     });
 
@@ -41,15 +40,15 @@ describe('WorkspaceState', () => {
       const name = 'test';
       workspace.setName(name);
 
-      expect(workspace.getName()).to.equal(name)
+      expect(workspace.getName()).toEqual(name)
     });
 
     it('should get State', () => {
-      expect(workspace.getState()).to.equal(state);
+      expect(workspace.getState()).toEqual(state);
     });
 
     it('should get Directories', () => {
-      expect(workspace.getDir()).to.equal(directories);
+      expect(workspace.getDir()).toEqual(directories);
     });
 
     it('should stringify', () => {
