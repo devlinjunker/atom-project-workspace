@@ -2,6 +2,7 @@
 import WorkspaceState from "../lib/WorkspaceState.js";
 
 describe('WorkspaceState', () => {
+
   describe('<Instance>', () => {
     const state = { 'init': 'state' };
     const directories = ['./'];
@@ -21,18 +22,21 @@ describe('WorkspaceState', () => {
       });
 
       it('should create create state with directories', () => {
-        new WorkspaceState({ state, directories });
+        const ws = new WorkspaceState({ state, directories });
+        expect(ws.getDir()).toEqual(directories);
       });
 
       it('should create state with name', () => {
         const name = 'name';
-        new WorkspaceState({ state, name });
+        const ws = new WorkspaceState({ state, name });
+        expect(ws.getName()).toEqual(name);
       });
 
       it('should create state with directories and name', () => {
         const name = 'dirName';
-        new WorkspaceState({ state, directories, name });
-
+        const ws = new WorkspaceState({ state, directories, name });
+        expect(ws.getName()).toEqual(name);
+        expect(ws.getDir()).toEqual(directories);
       });
     });
 
@@ -58,9 +62,10 @@ describe('WorkspaceState', () => {
       const expected = {
         name,
         state,
-        directories
+        dir: directories
       }
       const json = workspace.toString();
+      expect(json).toMatch(expected);
     });
   });
 });

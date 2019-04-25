@@ -15,6 +15,7 @@ describe('AtomProjectWorkspace', () => {
     activationPromise = atom.packages.activatePackage('atom-project-workspace');
   });
 
+  /*
   describe('when the atom-project-workspace:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
@@ -70,4 +71,5 @@ describe('AtomProjectWorkspace', () => {
       });
     });
   });
+  */
 });
