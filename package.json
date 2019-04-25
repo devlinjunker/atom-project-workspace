@@ -3,8 +3,7 @@
   "main": "./lib/atom-project-workspace",
   "version": "0.0.0",
   "description": "Save and Reload the Project Workspace in Atom for easier context switching",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "atom-project-workspace:saveState"
   },
@@ -13,6 +12,12 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-header": "^3.0.0",
+    "eslint-plugin-prettier": "^3.0.1"
   }
 }
