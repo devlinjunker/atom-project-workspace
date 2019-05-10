@@ -1,5 +1,6 @@
 'use babel';
 
+// TODO: import this?
 // import AtomProjectWorkspace from '../lib/atom-project-workspace';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
