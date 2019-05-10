@@ -1,5 +1,6 @@
-'use babel'
-import WorkspaceState from "../lib/WorkspaceState.js";
+'use babel';
+
+import { WorkspaceState } from '../lib/WorkspaceState';
 
 describe('WorkspaceState', () => {
 
@@ -14,10 +15,12 @@ describe('WorkspaceState', () => {
     describe('construct', () => {
       it('should require state to be passed', () => {
         try {
-            new WorkspaceState()
-            assert.fail('Workspace created without state');
-        } catch (e) {window
-            new WorkspaceState({ state });
+          new WorkspaceState();
+          // TODO:
+          /* eslint-disable-next-line no-undef*/
+          assert.fail('Workspace created without state');
+        } catch (e) {
+          new WorkspaceState({ state });
         }
       });
 
@@ -44,7 +47,7 @@ describe('WorkspaceState', () => {
       const name = 'test';
       workspace.setName(name);
 
-      expect(workspace.getName()).toEqual(name)
+      expect(workspace.getName()).toEqual(name);
     });
 
     it('should get State', () => {
@@ -57,13 +60,13 @@ describe('WorkspaceState', () => {
 
     it('should stringify', () => {
       const name = 'stringify';
-      workspace.setName(name)
+      workspace.setName(name);
 
       const expected = {
         name,
         state,
         dir: directories
-      }
+      };
       const json = workspace.toString();
       expect(json).toMatch(expected);
     });
