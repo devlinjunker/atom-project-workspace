@@ -31,13 +31,19 @@ globals:
   runs: readonly
   jasmine: readonly
 
+overrides:
+  - files:
+    - lib/*.js
+    excludedFiles: "spec/*.js"
+    rules:
+      header/header:
+        - warn
+        - block
+        - pattern: description
+
 # Custom Rules Below
 rules:
   # Documentation Rules
-  header/header:
-    - warn
-    - block
-    - pattern: description
   valid-jsdoc: error
   require-jsdoc:
     - warn
