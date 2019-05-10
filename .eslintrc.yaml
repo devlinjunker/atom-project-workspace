@@ -35,7 +35,7 @@ globals:
 overrides:
   - files:
     - lib/*.js
-    excludedFiles: "spec/*.js"
+    excludedFiles: spec/*.js
     rules:
       header/header:
         - warn
