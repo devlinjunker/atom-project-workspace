@@ -1,6 +1,6 @@
 'use babel';
 
-import AtomProjectWorkspace from '../lib/atom-project-workspace';
+// import AtomProjectWorkspace from '../lib/atom-project-workspace';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -32,10 +32,10 @@ describe('AtomProjectWorkspace', () => {
       runs(() => {
         expect(workspaceElement.querySelector('.atom-project-workspace')).toExist();
 
-        let atomProjectWorkspaceElement = workspaceElement.querySelector('.atom-project-workspace');
+        const atomProjectWorkspaceElement = workspaceElement.querySelector('.atom-project-workspace');
         expect(atomProjectWorkspaceElement).toExist();
 
-        let atomProjectWorkspacePanel = atom.workspace.panelForItem(atomProjectWorkspaceElement);
+        const atomProjectWorkspacePanel = atom.workspace.panelForItem(atomProjectWorkspaceElement);
         expect(atomProjectWorkspacePanel.isVisible()).toBe(true);
         atom.commands.dispatch(workspaceElement, 'atom-project-workspace:toggle');
         expect(atomProjectWorkspacePanel.isVisible()).toBe(false);
@@ -63,7 +63,7 @@ describe('AtomProjectWorkspace', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let atomProjectWorkspaceElement = workspaceElement.querySelector('.atom-project-workspace');
+        const atomProjectWorkspaceElement = workspaceElement.querySelector('.atom-project-workspace');
         expect(atomProjectWorkspaceElement).toBeVisible();
         atom.commands.dispatch(workspaceElement, 'atom-project-workspace:toggle');
         expect(atomProjectWorkspaceElement).not.toBeVisible();
