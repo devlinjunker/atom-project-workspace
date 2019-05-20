@@ -4,6 +4,10 @@
       {
         "label": "Save Project State",
         "command": "atom-project-workspace:saveState"
+      },
+      {
+        "label": "Toggle Start Save Dialog",
+        "command": "atom-project-workspace:startSave"
       }
     ]
   },
