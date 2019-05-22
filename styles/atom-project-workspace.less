@@ -5,4 +5,35 @@
 @import "ui-variables";
 
 .atom-project-workspace {
+
+  .editor.mini {
+    margin-bottom: 0px;
+  }
+
+  .input {
+    display: inline-block;
+    width: 85%;
+
+    &.clean {
+      font-size: 10px;
+      font-style: italic;
+    }
+  }
+
+  .saveBtn {
+    display:inline;
+    position: absolute;
+
+    font-size: 14px;
+    border: 1px solid grey;
+
+    padding: 2px 8px;
+    margin-left: 2.5%;
+
+    &:hover {
+      color: #8aaab1;
+      border-color: #8aaab1;
+      cursor: pointer;
+    }
+  }
 }

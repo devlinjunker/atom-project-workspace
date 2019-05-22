@@ -5,7 +5,7 @@
   "description": "Save and Reload the Project Workspace in Atom for easier context switching",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "atom-project-workspace:saveState"
+    "atom-workspace": ["atom-project-workspace:saveState", "atom-project-workspace:startSave"]
   },
   "repository": "https://github.com/atom/atom-project-workspace",
   "license": "MIT",

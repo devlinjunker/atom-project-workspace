@@ -32,15 +32,17 @@ globals:
   jasmine: readonly
 
 # Rules for only some file locations/paths (globs)
-overrides:
-  - files:
-    - lib/*.js
-    excludedFiles: spec/*.js
-    rules:
-      header/header:
-        - warn
-        - block
-        - pattern: description
+#
+# NOTE: Have to disable because expecting block header broke the 'use babel' directive at top of file
+# overrides:
+#   - files:
+#     - lib/*.js
+#     excludedFiles: spec/*.js
+#     rules:
+#       header/header:
+#         - warn
+#         - block
+#         - pattern: ^'use babel'
 
 # Custom Rules Below
 rules:
